@@ -24,52 +24,47 @@
     </ul>
 
     <h3>Global application configuration settings</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following attributes:</p>
+    <p>_ and has the following attributes:</p>
     <ul class="g-help-list">
-        <li><b>Application mode.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Debugging the application.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Registering an error handler.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Registering an exception handler.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
+        <li><b>Application mode.</b> The "GM_MODE" parameter can have the values ​​"production" (display mode for the end user) or "development" (development mode - output of information for the developer);</li>
+        <li><b>Debugging the application.</b> The value "true" (flag set) of the "GM_DEBUG" parameter indicates the output and recording of debugging information;</li>
+        <li><b>Registering an error handler.</b> Registering an error handler.</b> The value "true" (the flag is set) of the parameter
+"GM_ENABLE_ERROR_HANDLER" tells the application to use its own error handler, otherwise - the PHP handler is used;</li>
+        <li><b>Registering an exception handler.</b> The value "true" (flag set) of the "GM_ENABLE_EXCEPTION_HANDLER" parameter tells the application to use its own exception handler, otherwise the PHP handler is used.</li>
     </ul>
 
     <h3>PHP event and error logging configuration settings</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following attributes:</p>
+    <p>The PHP event and error logging configuration settings are set in the PHP configuration file (php.ini) or in your web server's .htaccess file using the following parameters:</p>
     <ul class="g-help-list">
-        <li><b>Printing errors to the screen along with the rest of the output.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Display errors that occur during startup.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Logging errors.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Maximum length of errors in the log in bytes.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Do not log duplicate errors.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Reporting memory leaks.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Error messages include HTML tags.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Errors are output in XML-RPC format.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><b>Display errors on screen along with other output.</b> <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.display-errors">The parameter "display_errors"</a> determines whether errors should be displayed on the screen along with the rest of the output, or whether errors should be hidden from the user;</li>
+        <li><b>Display errors that occur during startup.</b> If <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.display-startup-errors">parameter "display_startup_errors"</a> is enabled, errors that occur during PHP startup will not be displayed;</li>
+        <li><b>Outputting errors to the log.</b> <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.log-errors"> The parameter "log_errors"</a>specifies whether to write script error messages to the server error log or to the location specified by the directive error_log;</li>
+        <li><b>Maximum length of errors in the log in bytes.</b> The length limit applies to errors that are written to the error log or displayed on the screen and is defined by <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.log-errors-max-len"> the parameter "log_errors_max_len"</a>. The default value is 1024 bytes, and a value of 0 removes the limitation on the length of the error message. If the value is "false", the parameter is not defined;</li>
+        <li><b>Do not log duplicate errors.</b> <a href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.ignore-repeated-errors">The  parameter "ignore_repeated_errors"</a> disables logging of errors that are repeated;</li>
+        <li><b>Generating a memory leak report.</b> If <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.report-memleaks">the parameter "report_memleaks"</a> is enabled (by default), then a report on memory leaks recorded by the Zend memory manager will be generated;</li>
+        <li><b>Error messages include HTML tags.</b> If <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.html-errors">the parameter "html_errors"</a> is enabled, then the error messages will include HTML tags;</li>
+        <li><b>Errors are output in XML-RPC format.</b> If <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.xmlrpc-errors">the parameter "xmlrpc_errors"</a> is enabled, then normal error reporting is disabled and, instead, errors are output in XML-RPC format.</li>
     </ul>
 
     <h3>Setting up a logging service</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following attributes:</p>
+    <p>The operation of the logging service is determined by the following settings:</p>
     <ul class="g-help-list">
-        <li><b>Logging service enabled.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Performance profiling enabled.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Database query profiling enabled.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Mail profiling enabled.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Logging service is enabled.</b> Enables or disables logging of user actions.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Performance profiling is enabled.</b> Performance profiling is only available if the logging service and application debugging (the "GM_DEBUG" parameter must be set to "true") are enabled;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Database query profiling is enabled.</b> Query profiling is available only if performance profiling and application debugging (the "GM_DEBUG" parameter must be set to "true") are enabled;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Mail profiling enabled.</b> Mail profiling is only available if performance profiling and application debugging (the "GM_DEBUG" parameter must be set to "true") are enabled.</li>
     </ul>
 
-    <h3>Configuring the recording of "Errors" of the application by the logger</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following attributes:</p>
+    <h3>Setting up the application "Errors" recording by the logger</h3>
+    <p>Recording of messages (errors) to a file is performed by a logger and has the following parameters:</p>
     <ul class="g-help-list">
-        <li><b>Error logging enabled.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Automatically create.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Name of the message writer.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Exclude an entry for a route.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-    </ul>
-
-    <h3>Setting up the "Debugging" application logger</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following attributes:</p>
-    <ul class="g-help-list">
-        <li><b>Error logging enabled.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Automatically create.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Name of the message writer.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Exclude an entry for a route.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Error logging enabled.</b> Enables logging of errors to file if the flag is set.;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Automatically create.</b> Enable automatic writing to file when a message (error) appears, if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Message writer name.</b> The name of the logger service writer specified in the services configuration file;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Exclude entry for route.</b> Specify routes (via the "enter" separator) to the application module for which messages are passed;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Resolution for error directory.</b> Specifies the access mode to the directory in which the message (error) recording file is created. The value consists of three octal numbers and a zero (0) in front of them, defining the access level for the directory owner;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Permission for error files.</b> Specifies the access mode to the message (error) file. The value consists of three octal numbers and a zero (0) in front of them, defining the access level for the file owner. If the value is not set, the permission will correspond to the permission of the directory in which the file is located;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Maximum file size.</b> The maximum size of the message (error) log file in Kilobytes. If the file size exceeds the set value, the file entries will be deleted;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Path to the error file.</b> The path to the message (error) log file can be specified taking into account path aliases.</li>
     </ul>
 </article>

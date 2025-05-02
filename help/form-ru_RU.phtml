@@ -20,61 +20,53 @@
     </ul>
     <h2>Поля формы</h2>
     <ul class="g-help-list">
-        <li><b>Сбросить настройки.</b> Сбрасывает все настройки до значений по умолчанию (только после нажатия кнопки "Сохранить").</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Сбросить настройки.</b> Сбрасывает все настройки до значений по умолчанию (только после нажатия кнопки "Сохранить").</li>
     </ul>
 
     <h3>Глобальные параметры конфигурации приложения</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие атрибуты:</p>
+    <p>Глобальные параметры конфигурации приложения устанавливают вручную в файле (сценарии) автозагрузки приложения. К таким параметрам 
+относятся:</p>
     <ul class="g-help-list">
-        <li><b>Режим работы приложения.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Отладка приложения.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Регистрация обработчика ошибок.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Регистрация обработчика исключений.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
+        <li><b>Режим работы приложения.</b> Параметр "GM_MODE", может иметь значения "production" (режим отображения для конечного пользователя) или "development" (режим разработки - вывод информации для разработчика);</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Отладка приложения.</b> Значение "true" (флаг установлен) параметра "GM_DEBUG" указывает на вывод и запись отладочной информации;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Регистрация обработчика ошибок.</b> Значение "true" (флаг установлен) параметра 
+        "GM_ENABLE_ERROR_HANDLER" указывает приложению на использование собственного обработчика ошибок, иначе - применяется обработчик PHP;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Регистрация обработчика исключений.</b> Значение "true" (флаг установлен) параметра "GM_ENABLE_EXCEPTION_HANDLER" указывает приложению на использование собственного обработчика исключений, иначе -  применяется обработчик PHP.</li>
     </ul>
 
     <h3>Настройки конфигурации протоколирования событий и ошибок PHP</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие атрибуты:</p>
+    <p>Настройки конфигурации протоколирования событий и ошибок PHP устанавилвают в файле конфигурации PHP (php.ini) или в файле вашего 
+    веб-сервера (.htaccess) с помощью следующих параметрамов:</p>
     <ul class="g-help-list">
-        <li><b>Вывод ошибок на экран вместе с остальным выводом.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Отображение ошибок, возникающие во время запуска.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Вывод ошибок в журнал.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Максимальной длины ошибок в журнале в байтах.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Не заносить в журнал повторяющиеся ошибки.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Формирование отчета об утечках памяти.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Сообщения об ошибках включают теги HTML.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Ошибки выводятся в формате XML-RPC.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><b>Вывод ошибок на экран вместе с остальным выводом.</b> <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.display-errors">Параметр "display_errors"</a> определяет, требуется ли выводить ошибки на экран вместе с остальным выводом, либо ошибки должны быть скрыты от пользователя;</li>
+        <li><b>Отображение ошибок, возникающие во время запуска.</b> Если <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.display-startup-errors">параметр "display_startup_errors"</a> включен, ошибки, возникающие во время запуска PHP, не будут отображаться;</li>
+        <li><b>Вывод ошибок в журнал.</b> <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.log-errors"> Параметр "log_errors"</a>указывает, записывать ли сообщения об ошибках скрипта в лог ошибок сервера или в место, которое определяет директива error_log;</li>
+        <li><b>Максимальной длины ошибок в журнале в байтах.</b> Ограничение длины распространяется на ошибки, которые записываются в журнал ошибок или выводятся на экран и определяется <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.log-errors-max-len">параметром "log_errors_max_len"</a>. Значение по умолчанию равно 1024 байтам, а значение 0 снимает ограничение на длину сообщения об ошибке. Если значение "false", то параметр не определяется;</li>
+        <li><b>Не заносить в журнал повторяющиеся ошибки.</b> <a href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.ignore-repeated-errors">Параметр "ignore_repeated_errors"</a> Отключает запись в журнал ошибок, которые повторяются;</li>
+        <li><b>Формирование отчета об утечках памяти.</b> Если <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.report-memleaks">параметр "report_memleaks"</a> включен (по умолчанию), то будет формироваться отчёт об утечках памяти, зафиксированных менеджером памяти Zend;</li>
+        <li><b>Сообщения об ошибках включают теги HTML.</b> Если <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.html-errors">параметр "html_errors"</a> включен, то сообщения об ошибках будут включать HTML-теги;</li>
+        <li><b>Ошибки выводятся в формате XML-RPC.</b> Если <a target="__blank" href="https://www.php.net/manual/ru/errorfunc.configuration.php#ini.xmlrpc-errors">параметр "xmlrpc_errors"</a> включен, то нормальное оповещение об ошибках отключается и, вместо него, ошибки выводятся в формате XML-RPC.</li>
     </ul>
 
     <h3>Настройка службы логирования</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие атрибуты:</p>
+    <p>Работа службы логирования определяется следующими настройками:</p>
     <ul class="g-help-list">
-        <li><b>Служба логирования включена.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Профилирование производительности включено.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Профилирование запросов к базе данных включено.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Профилирование почты включено.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Служба логирования включена.</b> Включает или отключает логирование действий пользователя;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Профилирование производительности включено.</b> Профилирование производительности доступно, только если служба логирования и отладка приложения (параметр "GM_DEBUG" должен иметь значение "true") включены;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Профилирование запросов к базе данных включено.</b> Профилирование запросов доступно, только если профилирование производительности и отладка приложения (параметр "GM_DEBUG" должен иметь значение "true") включены;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Профилирование почты включено.</b> Профилирование почты доступно, только если профилирование производительности и отладка приложения (параметр "GM_DEBUG" должен иметь значение "true") включены.</li>
     </ul>
 
     <h3>Настройка записи «Ошибок» приложения логгером</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие атрибуты:</p>
+    <p>Запись сообщений (ошибок) в файл выполняется логгером и имеет следующие параметры:</p>
     <ul class="g-help-list">
-        <li><b>Запись ошибок включена.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Автоматически создавать.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Имя писателя сообщений.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Исключить запись для маршрута.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-    </ul>
-
-    <h3>Настройка записи «Отладки» приложения логгером</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие атрибуты:</p>
-    <ul class="g-help-list">
-        <li><b>Запись ошибок включена.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Автоматически создавать.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Имя писателя сообщений.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
-        <li><b>Исключить запись для маршрута.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Запись ошибок включена.</b> Включить запись ошибок в файл, если флаг установлен;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Автоматически создавать.</b> Включить автоматическиую запись в файл при появлении сообшения (ошибки), если флаг установлен;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Имя писателя сообщений.</b> Имя писателя службы логгера (logger), указанного в файле конфигурации служб;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Исключить запись для маршрута.</b> Указывают маршруты (через разделитель "enter") к модуля приложения для которых пропускаются сообщения;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Разрешение для каталога ошибок.</b> Указывают режим доступа к каталогу (директории) в котором создаётся файл записи собщений (ошибок). Значение состоит из трёх восьмеричных чисел и нулём (0) перед ними, определяющих уровень доступа для владельца каталога;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Разрешение для файлов ошибок.</b> Указывают режим доступа к файлу записи собщений (ошибок). Значение состоит из трёх восьмеричных чисел и нулём (0) перед ними, определяющих уровень доступа для владельца файла. Если значение не установлено, то разрешение будет соответстовать рашрешению каталога, в котром находится файл;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Максимальный размер файла.</b> Максимальный размер файла записи собщений (ошибок) в Килобайтах. Если размер файла превышает установленный, то записи файла будут удалены;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Путь к файлу ошибок.</b> Путь к файлу записей сообщений (ошибок) может указываться с учетом псевдонимов путей.</li>
     </ul>
 </article>
