@@ -12,8 +12,8 @@
 return [
     'name'        => 'Logging',
     'description' => 'Logging of messages (errors, debugging information ...) of the application',
-    'version'     => '1.0',
-    'versionDate' => '20-12-2017',
+    'version'     => '1.0.1',
+    'versionDate' => '02-05-2025',
     'author'      => 'GearMagic',
     'authorUrl'   => 'https://gearmagic.ru',
     'email'       => 'anton.tivonenko@gmail.com',
